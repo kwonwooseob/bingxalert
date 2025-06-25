@@ -30,7 +30,9 @@ def get_positions():
 
     url = f"https://open-api.bingx.com/openApi/swap/v2/user/positions?{query_string}&signature={signature}"
     response = requests.get(url, headers=headers)
-
+    
+    print("🔍 API 응답 확인:", response.text)  # ✅ 이 줄 추가
+    
     if response.status_code == 200:
         return response.json()
     else:
