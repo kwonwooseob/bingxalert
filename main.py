@@ -55,6 +55,7 @@ def index():
 
 @app.route('/run')
 def run_check():
+    print("🚀 /run 실행됨")  # ✅ 이것도 함께 추가
     check_and_notify()
     return "Check done!"
 
